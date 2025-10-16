@@ -49,10 +49,27 @@
 }
 
 .blog-preview:hover {
-box-shadow: 1px 3px 3px rgba(0,0,0,0.1);
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.1);
 }
+
 .blog-preview h2 {
   color: #f1356d;
   margin-bottom: 8px;
   font-size: 20px;
+}
+
+.blog-preview a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Blog Details Styles */
+.blog-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+
+.blog-details div {
+  margin: 20px 0;
 }
