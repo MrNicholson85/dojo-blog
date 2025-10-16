@@ -73,3 +73,40 @@
 .blog-details div {
   margin: 20px 0;
 }
+
+/* Create a new blog form */
+.create {
+  max-width: 400px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.create button {
+  background: #f1356d;
+  color: white;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+}
