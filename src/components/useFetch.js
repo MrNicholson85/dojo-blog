@@ -15,9 +15,7 @@ const useFetch = (url) => {
           if (!res.ok) {
             const body = await res.text().catch(() => "");
             const snippet = body ? body.slice(0, 200) : "(no body)";
-            throw new Error(
-              `HTTP ${res.status} ${res.statusText}: ${snippet}`
-            );
+            throw new Error(`HTTP ${res.status} ${res.statusText}: ${snippet}`);
           }
 
           const contentType = res.headers.get("content-type") || "";
@@ -25,7 +23,9 @@ const useFetch = (url) => {
             const body = await res.text().catch(() => "");
             const snippet = body ? body.slice(0, 200) : "(no body)";
             throw new Error(
-              `Expected JSON but received '${contentType || "unknown"}': ${snippet}`
+              `Expected JSON but received '${
+                contentType || "unknown"
+              }': ${snippet}`
             );
           }
           return res.json();
