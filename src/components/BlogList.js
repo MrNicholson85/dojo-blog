@@ -4,6 +4,7 @@ const BlogList = ({ blogs, title }) => {
   return (
     <div className="blog-list">
       <h2>{title}</h2>
+      <div class="grid gap-6 grid-cols-3">
       {blogs.map((blog) => (
         <div className="blog-preview" key={blog.id}>
           <Link to={`/blogs/${blog.id}`}>
@@ -12,6 +13,7 @@ const BlogList = ({ blogs, title }) => {
           </Link>
         </div>
       ))}
+      </div>
     </div>
   );
 };

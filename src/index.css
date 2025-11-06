@@ -1,48 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
-  color:#333;
+@layer base {
+  html {
+    font-family: 'Quicksand', sans-serif;
+  }
 }
 
-.navbar {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  max-width: 600px;
-  margin: auto;
-  border-bottom: 1px solid #f2f2f2;
-  justify-content: space-between; 
-}
+/* Using Tailwind classes directly in components */
 
-.navbar h1 {
-  color: #f1356d;
-}
-
-.navbar .links {
-  display: flex;
-  gap: 16px;
-}
-
-.navbar a {
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.navbar a:hover {
-  color: #f1356d;
-}
 
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  @apply max-w-[1200px] mx-auto;
 }
 
 .blog-preview {
+  @apply bg-gray-400 rounded-[8px];
   border-bottom: 1px solid #fafafa;
   padding: 10px 16px;
   margin: 20px 0;
@@ -53,7 +29,7 @@
 }
 
 .blog-preview h2 {
-  color: #f1356d;
+  @apply font-bold text-gray-100;
   margin-bottom: 8px;
   font-size: 20px;
 }

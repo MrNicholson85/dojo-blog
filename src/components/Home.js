@@ -9,7 +9,7 @@ const Home = () => {
   } = useFetch("http://localhost:8000/blogs");
 
   return (
-    <div className="home">
+    <div className="home" class="p-8">
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {blogs && <BlogList blogs={blogs} title="All Blogs" />}
